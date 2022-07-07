@@ -5,12 +5,12 @@ if (process.env.NODE_ENV !== "production") {
 const express = require("express");
 const path = require("path");
 const mongoose = require('mongoose');
-const Campground = require('./models/campground');
+const Hotel = require('./models/hotel');
 const methodOverride = require('method-override');
 const catchAsync = require('./utils/catchAsync');
 const ejsMate = require('ejs-mate');
 const ExpressError = require('./utils/ExpressError');
-const { campgroundSchema, reviewSchema } = require('./schemas.js')
+const { hotelSchema, reviewSchema } = require('./schemas.js')
 const Review = require('./models/review');
 const session = require('express-session');
 const flash = require('connect-flash');
@@ -18,11 +18,11 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 
-const campgroundRoutes = require('./routes/campgrounds');
+const hotelRoutes = require('./routes/hotels');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/users');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp', {
+mongoose.connect('mongodb://localhost:27017/yelp-hotel', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -72,8 +72,8 @@ app.use((req, res, next) => {
 })
 
 app.use('/', userRoutes);
-app.use('/campgrounds', campgroundRoutes);
-app.use('/campgrounds/:id/reviews', reviewRoutes);
+app.use('/hotels', hotelRoutes);
+app.use('/hotels/:id/reviews', reviewRoutes);
 
 app.get('/', (req, res) => {
     res.render('home');

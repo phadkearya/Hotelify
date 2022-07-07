@@ -43,7 +43,7 @@ module.exports.places = [
     // 'Hollow'
     'Stay',
     'Inn',
-    'campgrounds',
+    'hotels',
     'Rooms',
     'Motel',
     'Lodge',

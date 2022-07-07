@@ -13,7 +13,7 @@ ImageSchema.virtual('thumbnail').get(function () {
 
 const opts = { toJSON: { virtuals: true }, toObject: {virtuals: true} };
 
-const CampgroundSchema = new Schema({
+const HotelSchema = new Schema({
     title: String,
     price: Number,
     images: [ImageSchema],
@@ -42,14 +42,14 @@ const CampgroundSchema = new Schema({
     ]
 }, opts);
 
-CampgroundSchema.virtual('properties.popUpMarkup').get( function () {
-    const returnString = `<strong><a href="/campgrounds/${this._id}">${this.title}</a></strong><p>${this.description.substring(0, 20)}...</p>`;
+HotelSchema.virtual('properties.popUpMarkup').get( function () {
+    const returnString = `<strong><a href="/hotels/${this._id}">${this.title}</a></strong><p>${this.description.substring(0, 20)}...</p>`;
     return returnString;
 });
 
 // <p>${this.description.substring(0, 20)}...</p>
 
-CampgroundSchema.post('findOneAndDelete', async function (doc) {
+HotelSchema.post('findOneAndDelete', async function (doc) {
     if (doc) {
         await Review.deleteMany({
             _id: {
@@ -59,5 +59,5 @@ CampgroundSchema.post('findOneAndDelete', async function (doc) {
     }
 })
 
-module.exports = mongoose.model('Campground', CampgroundSchema);
+module.exports = mongoose.model('Hotel', HotelSchema);
 

@@ -15,23 +15,23 @@
     <div class="row">
         <div class="col">
             <% let index=0 %>
-            <% for (index=0;index<campgrounds.length/9;index++){ %>
+            <% for (index=0;index<hotels.length/3;index++){ %>
                 <div class="card mb-3">
                     <div class="col">
-                        <% if (campgrounds[index].images.length) { %> 
-                            <img id="img1" class="img-fluid" src="<%= campgrounds[index].images[0].url%>" alt="">
+                        <% if (hotels[index].images.length) { %> 
+                            <img id="img1" class="img-fluid" src="<%= hotels[index].images[0].url%>" alt="">
                         <% }else{ %>
                             <img id="img1" src="https://res.cloudinary.com/dwsoizmbr/image/upload/v1657003870/YelpCamp/ndrwtndtt07kxmwmqpdg.jpg" alt="">
                         <% } %>
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <h5 class="card-title"><%=campgrounds[index].title %></h5>
-                            <p class="card-text"><%= campgrounds[index].description %></p>
+                            <h5 class="card-title"><%=hotels[index].title %></h5>
+                            <p class="card-text"><%= hotels[index].description %></p>
                             <p class="card-text">
-                                <small><%= campgrounds[index].location %></small>
+                                <small><%= hotels[index].location %></small>
                             </p>
-                            <a href="campgrounds/<%= campgrounds[index]._id%>" class="btn btn-primary">View <%=campgrounds[index].title %></a>
+                            <a href="hotels/<%= hotels[index]._id%>" class="btn btn-primary">View <%=hotels[index].title %></a>
                         </div>
                     </div>
                 </div>
@@ -39,23 +39,23 @@
         </div>
         <div class="col">
             <% let index1=0 %>
-            <% for (index1=index;index1<2*(campgrounds.length/9);index1++){ %>
+            <% for (index1=index;index1<2*(hotels.length/3);index1++){ %>
                 <div class="card mb-3">
                     <div class="col">
-                        <% if (campgrounds[index1].images.length) { %> 
-                            <img id="img1" class="img-fluid" src="<%= campgrounds[index1].images[0].url%>" alt="">
+                        <% if (hotels[index1].images.length) { %> 
+                            <img id="img1" class="img-fluid" src="<%= hotels[index1].images[0].url%>" alt="">
                         <% }else{ %>
                             <img id="img1" src="https://res.cloudinary.com/dwsoizmbr/image/upload/v1657003870/YelpCamp/ndrwtndtt07kxmwmqpdg.jpg" alt="">
                         <% } %>
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <h5 class="card-title"><%=campgrounds[index1].title %></h5>
-                            <p class="card-text"><%= campgrounds[index1].description %></p>
+                            <h5 class="card-title"><%=hotels[index1].title %></h5>
+                            <p class="card-text"><%= hotels[index1].description %></p>
                             <p class="card-text">
-                                <small><%= campgrounds[index1].location %></small>
+                                <small><%= hotels[index1].location %></small>
                             </p>
-                            <a href="campgrounds/<%= campgrounds[index1]._id%>" class="btn btn-primary">View <%=campgrounds[index1].title %></a>
+                            <a href="hotels/<%= hotels[index1]._id%>" class="btn btn-primary">View <%=hotels[index1].title %></a>
                         </div>
                     </div>
                 </div>
@@ -63,23 +63,23 @@
         </div>
         <div class="col">
             <% let index2=0 %>
-            <% for (index2=index1;index2<campgrounds.length/3;index2++){ %>
+            <% for (index2=index1;index2<hotels.length;index2++){ %>
                 <div class="card mb-3">
                     <div class="col">
-                        <% if (campgrounds[index2].images.length) { %> 
-                            <img id="img1" class="img-fluid" src="<%= campgrounds[index2].images[0].url%>" alt="">
+                        <% if (hotels[index2].images.length) { %> 
+                            <img id="img1" class="img-fluid" src="<%= hotels[index2].images[0].url%>" alt="">
                         <% }else{ %>
                             <img id="img1" src="https://res.cloudinary.com/dwsoizmbr/image/upload/v1657003870/YelpCamp/ndrwtndtt07kxmwmqpdg.jpg" alt="">
                         <% } %>
                     </div>
                     <div class="col">
                         <div class="card-body">
-                            <h5 class="card-title"><%=campgrounds[index2].title %></h5>
-                            <p class="card-text"><%= campgrounds[index2].description %></p>
+                            <h5 class="card-title"><%=hotels[index2].title %></h5>
+                            <p class="card-text"><%= hotels[index2].description %></p>
                             <p class="card-text">
-                                <small><%= campgrounds[index2].location %></small>
+                                <small><%= hotels[index2].location %></small>
                             </p>
-                            <a href="campgrounds/<%= campgrounds[index]._id%>" class="btn btn-primary">View <%=campgrounds[index2].title %></a>
+                            <a href="hotels/<%= hotels[index2]._id%>" class="btn btn-primary">View <%=hotels[index2].title %></a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
 
 <script>
     const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-    const campgrounds = {features: <%- JSON.stringify(campgrounds) %>}
+    const hotels = {features: <%- JSON.stringify(hotels) %>}
 </script>
 
 <script src="/javascripts/clusterMap.js"></script>

@@ -3,17 +3,17 @@ const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10',
     zoom: 7,
-    center: campground.geometry.coordinates
+    center: hotel.geometry.coordinates
 });
 
 map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
 new mapboxgl.Marker()
-    .setLngLat(campground.geometry.coordinates)
+    .setLngLat(hotel.geometry.coordinates)
     .setPopup(
         new mapboxgl.Popup({ offset: 25 })
             .setHTML(
-                `<h3>${campground.title}</h3><p>${campground.location}</p>`
+                `<h3>${hotel.title}</h3><p>${hotel.location}</p>`
             )
     )
     .addTo(map);
