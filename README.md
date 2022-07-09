@@ -43,18 +43,18 @@ A new hotel can be added, along with multiple photos of the same.
 ##  BUILT WITH
 
 - Frontend: 
-	-HTML
-	-CSS
-	-Bootstrap
+	- HTML
+	- CSS
+	- Bootstrap
 - Backend:
-	-Node.js
-	-Mongoose
-	-MongoDB
-	-Express
-	-Joi
-	-Passport
-	-MapBox API
-	-Cloudinary
+	- Node.js
+	- Mongoose
+	- MongoDB
+	- Express
+	- Joi
+	- Passport
+	- MapBox API
+	- Cloudinary
 	
 ## Databases
 
