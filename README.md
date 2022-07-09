@@ -30,6 +30,9 @@ A new hotel can be added, along with multiple photos of the same.
 	- Add new hotels
 	- Add reviews for existing hotels
 	- Edit and/or delete own hotels/reviews
+	
+![7](https://user-images.githubusercontent.com/95274873/178106522-52da36b2-8c2d-48b7-aa30-2613e6b1e577.png)
+
   
   ![5](https://user-images.githubusercontent.com/95274873/178106266-27e9ec7d-b9c0-41a6-8f71-7b4c89b5ebf3.png)
   
@@ -39,8 +42,19 @@ A new hotel can be added, along with multiple photos of the same.
   
 ##  BUILT WITH
 
-- Frontend: HTML, CSS, Bootstrap
-- Backend:Node.js, Mongoose, MongoDB, Express, Joi, Passport, MapBox API, Cloudinary
+- Frontend: 
+	-HTML
+	-CSS
+	-Bootstrap
+- Backend:
+	-Node.js
+	-Mongoose
+	-MongoDB
+	-Express
+	-Joi
+	-Passport
+	-MapBox API
+	-Cloudinary
 	
 ## Databases
 
