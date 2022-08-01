@@ -61,7 +61,7 @@ A new hotel can be added, along with multiple photos of the same.
 Used MongoDB to maintain the databases.
 All the models can be found in the models directory created using mongoose.
 
-- Campground Schema:
+- Hotel Schema:
 	- title (String)
 	- price (Number)
 	- images ([ImageSchema])
